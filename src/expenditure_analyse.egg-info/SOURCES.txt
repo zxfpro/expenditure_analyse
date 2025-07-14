@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/expenditure_analyse/__init__.py
+src/expenditure_analyse/core.py
+src/expenditure_analyse/log.py
+src/expenditure_analyse/server.py
+src/expenditure_analyse.egg-info/PKG-INFO
+src/expenditure_analyse.egg-info/SOURCES.txt
+src/expenditure_analyse.egg-info/dependency_links.txt
+src/expenditure_analyse.egg-info/requires.txt
+src/expenditure_analyse.egg-info/top_level.txt
+tests/test_main.py
