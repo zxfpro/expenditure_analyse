@@ -7,7 +7,7 @@ from .question_answering import answer_query, predict_activity
 from .config import DEFAULT_COLUMN_MAPPING, DEFAULT_CATEGORY_RULES, DEFAULT_ADVICE_RULES
 from .log import setup_logging # 假设log.py提供setup_logging
 
-logger = setup_logging(level='debug') # 初始化日志，设置为DEBUG级别
+logger = setup_logging() # 初始化日志
 
 _processed_df_cache = None # 用于缓存已处理的DataFrame，供问答模块使用
 
@@ -53,12 +53,12 @@ def analyze_bank_statement(csv_file_path: str, config: dict = None) -> str:
         logger.debug(f"Loading CSV from {csv_file_path} with mapping: {current_config['column_mapping']}")
         df = load_csv(csv_file_path, current_config["column_mapping"])
         df = preprocess_data(df, current_config["column_mapping"])
+        _processed_df_cache = df.copy() # Cache the processed DataFrame for query module
         logger.info("Data loaded and preprocessed successfully.")
 
         # 2. Apply Categorization
         logger.debug(f"Applying categories with rules: {current_config['category_rules']}")
         df = apply_category(df, current_config["category_rules"])
-        _processed_df_cache = df.copy() # Cache the processed DataFrame for query module
         logger.info("Transactions categorized.")
 
         # 3. Analyze Data

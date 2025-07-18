@@ -34,7 +34,7 @@ def setup_logging(level='info', log_file_name="app.log"):
 
         # Console Handler
         console_handler = logging.StreamHandler()
-        console_handler.setLevel(numeric_level) # Console shows INFO and above
+        console_handler.setLevel(logging.INFO) # Console shows INFO and above
         console_handler.setFormatter(formatter)
         logger.addHandler(console_handler)
 

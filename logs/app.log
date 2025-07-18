@@ -1,0 +1,1260 @@
+2025-07-14 18:18:32,974 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:18:32,989 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,005 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,008 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,008 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,054 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:18:33,054 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:18:33,057 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:18:33,060 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,074 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,076 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,076 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,077 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:18:33,079 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,084 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,086 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,086 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,089 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:18:33,092 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:18:33,094 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,148 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,150 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,150 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,150 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:18:33,153 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:18:33,156 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,169 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,170 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,170 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,170 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:18:33,170 - ERROR - expenditure_analyse.log - core:131 - An error occurred during query processing: 'category'
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/.venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'category'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 129, in query_bank_statement
+    return answer_query(_processed_df_cache, query)
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/question_answering.py", line 32, in answer_query
+    category_expense = df[(df['category'] == category) & (~df['is_income'])]['amount'].sum()
+                           ~~^^^^^^^^^^^^
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/.venv/lib/python3.13/site-packages/pandas/core/frame.py", line 4107, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/.venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'category'
+2025-07-14 18:18:33,177 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:18:33,179 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,189 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,191 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,191 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,191 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:18:33,196 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:18:33,198 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,208 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,209 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,210 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,210 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:18:33,214 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:18:33,216 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,226 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,227 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,227 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,227 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:18:33,229 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-41/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:18:33,231 - INFO - expenditure_analyse.log - core:57 - Data loaded and preprocessed successfully.
+2025-07-14 18:18:33,241 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:18:33,242 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:18:33,243 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:18:33,243 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:19:05,091 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:19:05,116 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,129 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,134 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,134 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,174 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:19:05,174 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:19:05,176 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:19:05,184 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,202 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,203 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,203 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,207 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:19:05,212 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,220 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,225 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,226 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,242 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:19:05,248 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:19:05,250 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,263 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,264 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,264 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,264 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:19:05,266 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:19:05,268 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,283 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,288 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,288 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,288 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:19:05,291 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:19:05,296 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,308 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,310 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,310 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,310 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:19:05,315 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:19:05,317 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,327 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,329 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,329 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,329 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:19:05,335 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:19:05,337 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,352 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,355 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,355 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,355 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:19:05,363 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-42/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:19:05,368 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:19:05,377 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:19:05,379 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:19:05,379 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:19:05,379 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:20:17,564 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:20:17,974 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,001 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,009 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,010 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,082 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:20:18,082 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:20:18,087 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:20:18,089 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,104 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,106 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,106 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,107 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:20:18,111 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,117 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,118 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,118 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,129 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:20:18,135 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:20:18,140 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,179 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,180 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,180 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,181 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:20:18,182 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:20:18,184 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,195 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,196 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,196 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,196 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:20:18,198 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:20:18,200 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,212 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,214 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,214 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,214 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:20:18,220 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:20:18,222 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,233 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,235 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,235 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,235 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:20:18,241 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:20:18,244 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,253 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,255 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,255 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,255 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:20:18,266 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-43/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:20:18,274 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:18,286 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:18,288 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:18,288 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:18,288 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:20:39,115 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:20:39,132 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,144 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,149 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,149 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,195 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:20:39,195 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:20:39,197 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:20:39,199 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,218 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,231 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,231 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,280 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:20:39,285 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,301 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,302 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,302 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,303 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:20:39,304 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:20:39,306 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,317 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,320 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,320 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,320 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:20:39,322 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:20:39,329 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,351 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,353 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,353 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,353 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:20:39,355 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:20:39,357 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,374 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,377 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,377 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,377 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:20:39,383 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:20:39,385 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,396 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,398 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,398 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,398 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:20:39,405 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:20:39,407 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,417 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,419 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,419 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,419 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:20:39,421 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-44/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:20:39,423 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:20:39,435 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:20:39,437 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:20:39,437 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:20:39,437 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:21:10,381 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:21:10,392 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,404 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,407 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,408 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,436 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:21:10,436 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:21:10,438 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:21:10,440 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,451 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,453 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,453 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,456 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:21:10,458 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,463 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,464 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,464 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,465 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:21:10,466 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:21:10,470 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,523 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,525 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,525 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,525 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:21:10,527 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:21:10,529 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,540 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,542 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,542 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,542 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:21:10,544 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:21:10,546 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,556 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,557 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,557 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,557 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:21:10,563 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:21:10,565 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,575 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,576 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,576 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,576 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:21:10,581 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:21:10,583 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,594 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,596 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,596 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,596 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:21:10,598 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-45/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:21:10,600 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:10,609 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:10,611 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:10,611 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:10,611 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:21:33,575 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:21:33,587 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,593 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,597 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,597 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,786 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:21:33,786 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:21:33,788 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:21:33,791 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,830 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,859 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,859 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,885 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:21:33,902 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,904 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,909 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,910 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,911 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:21:33,914 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:21:33,923 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,926 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,927 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,927 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,928 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:21:33,929 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:21:33,931 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,933 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,936 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,936 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,936 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:21:33,938 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:21:33,940 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,942 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,943 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,943 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,943 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:21:33,950 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:21:33,952 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,954 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,956 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,956 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,956 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:21:33,962 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:21:33,964 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,966 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,968 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,968 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,968 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:21:33,970 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-46/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:21:33,972 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:21:33,974 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:21:33,975 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:21:33,976 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:21:33,976 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:23:23,991 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:23:24,002 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,017 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,022 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,022 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,069 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:23:24,070 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:23:24,072 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:23:24,075 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,087 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,089 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,089 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,090 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:23:24,092 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,098 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,099 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,099 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,100 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:23:24,101 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:23:24,103 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,113 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,114 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,114 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,114 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:23:24,116 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:23:24,118 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,163 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,165 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,165 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,165 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:23:24,177 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:23:24,180 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,189 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,190 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,190 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,190 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:23:24,196 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:23:24,198 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,208 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,209 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,209 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,209 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:23:24,215 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:23:24,217 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,228 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,230 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,230 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,230 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:23:24,232 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-47/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:23:24,234 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:23:24,245 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:23:24,246 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:23:24,246 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:23:24,246 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:24:18,864 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:24:18,876 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:18,892 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:18,899 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:18,899 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:18,947 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:24:18,947 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:24:18,954 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:24:18,959 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:19,018 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:19,020 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:19,020 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:19,024 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:24:19,026 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:19,032 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:19,035 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:19,036 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:19,037 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:24:19,040 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:24:19,044 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:19,072 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:19,076 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:19,076 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:19,076 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:24:19,078 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:24:19,080 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:19,094 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:19,096 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:19,096 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:19,096 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:24:19,098 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:24:19,100 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:19,113 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:19,114 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:19,114 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:19,114 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:24:19,120 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:24:19,122 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:19,135 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:19,136 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:19,136 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:19,136 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:24:19,142 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:24:19,145 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:19,160 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:19,161 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:19,162 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:19,162 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:24:19,164 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-48/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:24:19,165 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:19,178 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:19,179 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:19,179 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:19,179 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:24:40,360 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-49/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:24:40,370 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:40,384 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:40,388 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:40,388 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:40,413 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:24:40,413 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:24:40,415 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-49/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:24:40,417 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:40,431 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:40,432 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:40,438 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:40,443 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-49/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:24:40,448 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:40,485 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:40,487 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:40,487 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:40,491 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:24:40,492 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-49/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:24:40,495 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:40,510 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:40,512 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:40,512 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:40,513 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:24:40,514 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-49/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:24:40,517 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:40,528 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:40,529 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:40,529 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:40,530 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:24:40,537 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-49/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:24:40,539 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:40,550 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:40,552 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:40,552 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:40,552 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:24:40,555 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-49/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:24:40,557 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:24:40,569 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:24:40,571 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:24:40,571 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:24:40,571 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:26:06,868 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-50/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:26:06,878 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:06,892 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:06,897 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:06,897 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:06,940 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:26:06,940 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:26:06,942 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-50/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:26:06,944 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:06,956 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:06,957 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:06,957 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:06,958 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-50/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:26:06,960 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:06,967 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:06,968 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:06,968 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:06,969 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:26:06,970 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-50/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:26:06,972 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:06,983 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:06,985 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:06,985 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:06,985 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:26:06,987 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-50/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:26:06,988 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:07,000 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:07,002 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:07,002 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:07,002 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:26:07,010 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-50/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:26:07,012 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:07,023 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:07,025 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:07,025 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:07,025 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:26:07,028 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-50/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:26:07,030 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:07,042 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:07,044 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:07,044 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:07,044 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:26:25,224 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:26:25,238 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,252 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,260 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,260 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,306 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:26:25,306 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:26:25,308 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:26:25,310 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,322 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,324 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,324 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,325 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:26:25,329 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,336 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,337 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,337 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,338 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:26:25,339 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:26:25,341 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,356 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,357 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,357 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,357 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:26:25,359 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:26:25,361 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,373 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,375 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,375 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,375 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:26:25,377 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:26:25,379 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,391 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,392 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,392 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,393 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:26:25,396 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:26:25,397 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,411 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,412 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,413 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,413 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:26:25,420 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:26:25,422 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,434 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,435 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,435 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,435 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:26:25,438 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-51/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:26:25,440 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:26:25,451 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:26:25,453 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:26:25,453 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:26:25,453 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:27:13,086 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:27:13,097 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,118 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,121 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,121 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,165 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:27:13,165 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:27:13,167 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:27:13,169 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,183 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,184 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,185 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,186 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:27:13,188 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,196 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,197 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,197 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,198 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:27:13,199 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:27:13,201 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,221 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,223 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,223 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,223 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:27:13,226 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:27:13,228 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,246 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,247 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,247 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,247 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:27:13,249 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:27:13,251 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,270 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,272 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,272 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,272 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:27:13,275 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:27:13,277 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,292 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,294 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,294 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,294 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:27:13,301 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:27:13,303 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,321 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,323 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,323 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,323 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:27:13,328 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-52/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:27:13,330 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:13,359 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:13,360 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:13,360 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:13,360 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:27:45,145 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:27:45,165 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,186 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,191 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,191 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,237 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:27:45,237 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:27:45,239 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:27:45,242 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,256 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,258 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,258 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,260 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:27:45,261 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,269 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,270 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,270 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,270 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:27:45,271 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:27:45,274 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,288 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,289 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,289 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,290 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:27:45,291 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:27:45,293 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,306 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,308 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,308 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,308 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:27:45,309 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:27:45,311 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,325 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,326 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,326 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,326 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:27:45,328 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:27:45,330 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,343 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,345 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,345 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,345 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:27:45,350 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:27:45,352 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,365 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,367 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,367 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,367 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:27:45,369 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-53/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:27:45,371 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:45,385 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:45,387 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:45,387 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:45,387 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:27:55,822 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:27:55,833 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:55,853 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:55,856 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:55,856 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:55,898 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:27:55,898 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:27:55,901 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:27:55,903 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:55,919 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:55,921 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:55,921 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:55,923 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:27:55,925 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:55,932 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:55,933 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:55,934 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:55,934 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:27:55,936 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:27:55,938 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:55,952 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:55,954 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:55,954 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:55,954 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:27:55,956 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:27:55,958 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:55,974 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:55,976 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:55,977 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:55,977 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:27:55,979 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:27:55,981 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:55,996 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:55,997 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:55,998 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:55,998 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:27:56,000 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:27:56,003 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:56,017 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:56,019 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:56,019 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:56,019 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:27:56,025 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:27:56,026 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:56,041 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:56,043 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:56,043 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:56,043 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:27:56,046 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-54/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:27:56,048 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:27:56,063 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:27:56,065 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:27:56,065 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:27:56,066 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:28:21,955 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:28:21,965 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:21,984 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:21,987 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:21,987 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,032 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:28:22,032 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:28:22,034 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:28:22,037 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:22,053 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:22,055 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:22,055 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,057 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:28:22,059 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:22,066 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:22,068 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:22,068 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,070 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:28:22,072 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:28:22,075 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:22,093 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:22,094 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:22,095 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,095 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:28:22,097 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:28:22,099 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:22,113 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:22,115 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:22,115 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,115 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:28:22,117 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:28:22,118 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:22,132 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:22,133 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:22,133 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,134 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:28:22,137 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:28:22,139 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:22,153 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:22,154 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:22,155 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,155 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:28:22,160 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:28:22,162 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:22,175 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:22,177 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:22,178 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,178 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:28:22,180 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-55/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:28:22,182 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:28:22,196 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:28:22,197 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:28:22,197 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:28:22,197 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:29:03,422 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:29:03,434 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,470 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,473 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,473 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,474 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:29:03,475 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:29:03,477 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:29:03,479 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,498 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,500 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,501 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,503 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:29:03,506 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,516 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,517 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,517 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,518 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:29:03,520 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:29:03,523 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,539 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,540 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,540 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,540 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:29:03,542 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:29:03,544 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,560 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,562 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,562 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,562 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:29:03,564 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:29:03,566 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,580 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,581 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,581 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,581 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:29:03,584 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:29:03,586 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,599 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,600 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,601 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,601 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:29:03,644 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:29:03,646 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,660 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,661 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,662 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,662 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:29:03,664 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-56/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:29:03,666 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:03,683 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:03,686 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:03,687 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:03,687 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:29:49,697 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:29:49,718 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:49,749 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:49,761 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:49,762 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:49,765 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:29:49,766 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:29:49,774 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:29:49,778 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:49,795 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:49,796 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:49,797 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:49,798 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:29:49,801 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:49,809 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:49,811 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:49,812 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:49,814 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:29:49,816 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:29:49,818 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:49,834 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:49,836 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:49,836 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:49,836 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:29:49,838 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:29:49,841 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:49,858 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:49,860 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:49,860 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:49,860 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:29:49,862 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:29:49,880 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:49,900 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:49,902 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:49,902 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:49,902 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:29:49,906 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:29:49,910 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:49,924 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:49,925 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:49,926 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:49,926 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:29:49,963 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:29:49,965 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:49,979 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:49,981 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:49,981 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:49,981 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:29:49,984 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-57/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:29:49,986 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:29:50,000 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:29:50,001 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:29:50,001 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:29:50,001 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:30:36,011 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:30:36,023 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,050 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,054 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,054 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,056 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:30:36,056 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:30:36,058 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:30:36,061 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,078 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,081 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,082 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,083 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:30:36,085 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,096 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,098 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,098 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,099 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:30:36,100 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:30:36,103 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,125 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,128 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,129 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,129 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:30:36,132 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:30:36,136 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,152 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,154 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,154 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,154 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:30:36,156 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:30:36,158 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,175 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,176 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,176 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,177 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:30:36,180 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:30:36,182 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,197 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,200 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,201 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,201 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:30:36,288 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:30:36,294 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,323 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,324 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,325 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,325 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:30:36,327 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-58/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:30:36,333 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:30:36,349 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:30:36,351 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:30:36,352 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:30:36,352 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:31:12,575 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:31:12,621 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,649 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,661 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,661 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,662 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:31:12,662 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:31:12,666 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:31:12,668 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,687 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,688 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,688 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,690 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:31:12,693 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,702 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,705 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,705 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,706 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:31:12,709 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:31:12,711 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,726 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,727 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,727 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,727 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:31:12,729 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:31:12,732 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,748 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,749 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,750 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,750 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:31:12,752 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:31:12,754 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,769 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,770 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,770 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,770 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:31:12,773 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:31:12,776 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,791 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,793 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,793 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,793 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:31:12,834 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:31:12,836 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,851 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,853 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,854 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,854 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:31:12,856 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-59/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:31:12,858 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:12,871 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:12,873 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:12,873 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:12,873 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:31:35,622 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:31:35,654 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,673 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,676 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,677 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,678 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:31:35,678 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:31:35,679 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:31:35,682 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,696 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,697 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,698 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,699 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:31:35,701 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,710 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,711 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,711 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,712 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:31:35,713 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:31:35,717 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,731 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,733 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,733 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,733 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:31:35,735 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:31:35,737 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,751 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,753 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,753 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,753 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:31:35,755 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:31:35,760 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,779 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,781 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,781 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,781 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:31:35,785 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:31:35,788 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,801 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,803 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,803 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,803 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:31:35,848 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:31:35,851 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,864 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,866 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,866 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,866 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:31:35,869 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-60/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:31:35,872 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:35,885 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:35,887 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:35,888 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:35,888 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
+2025-07-14 18:31:53,095 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_analyze_bank_statement_su0/test_basic_statement.csv
+2025-07-14 18:31:53,112 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,132 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,143 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,143 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,144 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: non_existent_file.csv
+2025-07-14 18:31:53,145 - ERROR - expenditure_analyse.log - core:81 - Error: The file 'non_existent_file.csv' was not found.
+Traceback (most recent call last):
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/core.py", line 54, in analyze_bank_statement
+    df = load_csv(csv_file_path, current_config["column_mapping"])
+  File "/Users/zhaoxuefeng/GitHub/expenditure_analyse/src/expenditure_analyse/data_loader.py", line 22, in load_csv
+    raise FileNotFoundError(f"文件未找到: {file_path}")
+FileNotFoundError: 文件未找到: non_existent_file.csv
+2025-07-14 18:31:53,147 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_analyze_bank_statement_cu0/custom_statement.csv
+2025-07-14 18:31:53,150 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,166 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,167 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,168 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,169 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_analyze_bank_statement_em0/empty.csv
+2025-07-14 18:31:53,172 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,180 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,181 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,182 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,183 - WARNING - expenditure_analyse.log - core:110 - No bank statement data loaded. Please run analyze_bank_statement first.
+2025-07-14 18:31:53,184 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_query_bank_statement_tota0/test_basic_statement.csv
+2025-07-14 18:31:53,187 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,201 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,202 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,202 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,202 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的总支出是多少？'
+2025-07-14 18:31:53,204 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_query_bank_statement_cate0/test_basic_statement.csv
+2025-07-14 18:31:53,207 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,284 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,287 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,287 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,287 - INFO - expenditure_analyse.log - core:113 - Processing query: '我的餐饮支出是多少？'
+2025-07-14 18:31:53,301 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_query_bank_statement_rece0/test_basic_statement.csv
+2025-07-14 18:31:53,307 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,329 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,336 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,337 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,337 - INFO - expenditure_analyse.log - core:113 - Processing query: '我上周花了多少钱？'
+2025-07-14 18:31:53,341 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_query_bank_statement_pred0/test_prediction_statement.csv
+2025-07-14 18:31:53,347 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,364 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,365 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,365 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,366 - INFO - expenditure_analyse.log - core:113 - Processing query: '我每天中午12点通常会做什么？'
+2025-07-14 18:31:53,374 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_query_bank_statement_spec0/test_basic_statement.csv
+2025-07-14 18:31:53,380 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,405 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,407 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,407 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,407 - INFO - expenditure_analyse.log - core:113 - Processing query: '我2023年10月05号做了什么？'
+2025-07-14 18:31:53,411 - INFO - expenditure_analyse.log - core:37 - Starting comprehensive analysis for: /private/var/folders/sj/9gkwxdgs4h3ck3kytmdgk4240000gn/T/pytest-of-zhaoxuefeng/pytest-61/test_query_bank_statement_unre0/test_basic_statement.csv
+2025-07-14 18:31:53,415 - INFO - expenditure_analyse.log - core:56 - Data loaded and preprocessed successfully.
+2025-07-14 18:31:53,428 - INFO - expenditure_analyse.log - core:62 - Transactions categorized.
+2025-07-14 18:31:53,430 - INFO - expenditure_analyse.log - core:67 - Financial analysis completed.
+2025-07-14 18:31:53,430 - INFO - expenditure_analyse.log - core:78 - Full analysis report with advice generated successfully.
+2025-07-14 18:31:53,430 - INFO - expenditure_analyse.log - core:113 - Processing query: '告诉我一些不寻常的事情。'
